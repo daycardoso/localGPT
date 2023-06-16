@@ -7,6 +7,10 @@ from langchain.chains import RetrievalQA
 from langchain.embeddings import HuggingFaceInstructEmbeddings
 from langchain.llms import HuggingFacePipeline
 
+from googletrans import Translator
+
+translator = Translator()
+
 # from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.vectorstores import Chroma
 from transformers import (
@@ -194,18 +198,34 @@ def main(device_type, show_sources):
     # model_basename = "wizardLM-7B-GPTQ-4bit.compat.no-act-order.safetensors"
     model_id = "TheBloke/WizardLM-7B-uncensored-GPTQ"
     model_basename = "WizardLM-7B-uncensored-GPTQ-4bit-128g.compat.no-act-order.safetensors"
+
     llm = load_model(device_type, model_id=model_id, model_basename=model_basename)
 
     qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever, return_source_documents=True)
     # Interactive questions and answers
+    # query = None
+    # answer = None
     while True:
+        # context = context if answer is not None else None
+
         query = input("\nEnter a query: ")
+        query = translator.translate(query, src='pt', dest='en').text
+        # bkp = query
+
+        # if context is not None:
+        #     query = context + " " + query
+
+
         if query == "exit":
             break
         # Get the answer from the chain
         res = qa(query)
         answer, docs = res["result"], res["source_documents"]
+        # context = 'In this sentence: "Query: ' + bkp + ". Answer: " + answer + '".'
 
+        answer = translator.translate(answer, src='en', dest='pt').text
+
+        
         # Print the result
         print("\n\n> Question:")
         print(query)
