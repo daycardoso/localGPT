@@ -1,0 +1,237 @@
+﻿Procedimento Operacional Padrão
+Funcionamento Poços 4.0
+Identificação de Falhas no Sistema
+Análise do Dashboard
+Indicadores de Desempenho Operacional
+
+Apresentação:
+O Poço 4.0 é um modulo integrado de controle do tratamento de águas subterrâneas para abastecimento humano. Além de controlar bombas dosadoras de produtos químicos, acompanha e registra outras variáveis, como: pH, temperatura, cor e turbidez da água, macro medidores de vazão, horímetros e consumo de químicos.
+Por trabalhar com vários periféricos, os equipamentos do Poço 4.0 estão sujeitos a manutenções preventivas. Estas manutenções têm como máxima o não comprometimento e o bom desempenho do conjunto e do tratamento da água. Este documento tem por objetivo apresentar as lógicas de trabalho do Poços 4.0, de identificação de falhas no sistema e indicadores de desempenho operacional dos equipamentos.
+________________
+
+
+Procedimento Operacional Padrão de Operação no Poço
+1. Conectar o tablet à Wi-Fi do poço;
+   1. Se não conectar:
+      1. Contatar equipe de suporte de TI;
+   2. Se conectar e o tablet travar:
+      1. Verificar se é o Wi-Fi do poço correto, se continuar;
+      2. Reiniciar aplicativo, se continuar;
+      3. Reiniciar equipamento, se continuar;
+      4. Contatar equipe de suporte de TI;
+   3. Verificar se os comandos estão sendo escritos;
+      1. Se não estiver:
+         1. Contatar equipe de suporte de TI;
+2. Verificar os resultados das análises realizadas anteriormente;
+3. Verificar se o overflow está cheio;
+   1. Se não estiver:
+      1. Verificar se está passando água na linha, se continuar;
+      2. Aumentar a abertura do registro de entrada de água no overflow, se continuar;
+      3. Aumentar a abertura da válvula agulha na linha, 
+4. Verificar se está passando água nas mangueiras que levam amostra do overflow ao colorímetro;
+   1. Se não estiver:
+      1. Desconectar mangueiras para que o ar saia delas, se continuar;
+      2. Aumentar a abertura do registro do overflow da saída para os analisadores, se continuar;
+      3. Desconectar mangueiras do “Y” da válvula para que o ar ou resquícios de poeira saiam e desobstruam a bifurcação;
+5. Verificar se as tinas de Ácido Fluossilícico e de Hipoclorito de Sódio estão cheias;
+   1. Se não estiver:
+      1. Informar aos responsáveis da CORSAN;
+6. Realizar diagnóstico em cada analisador;
+   1. Se acusar erro:
+      1. Verificar receptor, se continuar;
+      2. Verificar chicote, se continuar;
+      3. Verificar led, se continuar;
+      4. Verificar placa de interface;
+7. Verificar se o funcionamento da válvula seletora está conforme o esperado;
+   1. Se não estiver:
+      1. Conferir se as moscas do êmbolo estão apertadas, se continuar;
+      2. Zerar válvula, se continuar;
+      3. Verificar encoder, se continuar;
+      4. Verificar chaves do drive;
+8. Verificar se há reagentes nas garrafinhas;
+   1. Se não tiver:
+      1. Preencher as garrafas de reagentes;
+      2. Pressionar “Preencher reagentes” no tablet;
+9. Verificar se a bomba peristáltica está dosando;
+   1. Se não estiver;
+      1. Verificar se o pressionador da mangueira está no segundo degrau, se continuar;
+      2. Verificar chicote, se continuar;
+      3. Contatar equipe de suporte de TI;
+10. Realizar comparação de resultados de Cloro Livre e Fluoreto com Hach Pocket Colorimeter:
+   1. Retirar uma amostra de água do overflow;
+   2. Iniciar análise no equipamento Poço 4.0;
+   3. Analisar amostra nos equipamentos Hach Pocket Colorimeter;
+   4. Comparar resultados:
+      1. Se a diferença entre os resultados for inferior a 0,15 ppm considerar como dentro do padrão;
+      2. Se a diferença entre os resultados for entre 0,15 e 0,30 ppm:
+         1. Calibrar a bomba peristáltica, e reanalisar;
+         2. Se a diferença se mantiver entre 0,15 e 0,30 ppm, realizar uma calibração de ajuste e reanalisar;
+            1. Não é permitido o ajuste em cima de ajuste;
+         3. Se a diferença diminuir para menos 0,15 ppm, considerar como dentro do padrão;
+         4. Se a diferença se mantiver entre 0,15 e 0,30 ppm, realizar uma calibração do parâmetro.
+      3. Se a diferença entre os resultados for maior que 0,30 ppm, realizar uma calibração do parâmetro.
+11. Feitos os ajustes e/ ou calibrações, reanalisar a água do overflow e comparar os resultados novamente, a fim de verificar a assertividade dos resultados;
+
+
+Avisos;
+1. Para o analisador funcionar é necessário ter vazão de amostra maior que 0.1, vazão de macro maior que 1 e nível de reagente maior ou igual a 5%;
+2. Quando o equipamento for reinicializado, o analisador vai demorar 5 minutos para começar uma análise depois de ter os parâmetros comentados acima;
+3. Quando ocorrer algum problema com o sensor de pH, vai demorar 12 minutos para reconexão;
+4. Quando o equipamento está em autônomo, a bomba dosadora tem um limite de 50% para realizar a dosagem, assim podendo não alcançar o valor desejado de Set Point;
+Procedimento Operacional Padrão de Operação no Dashboard:
+1. Entrar no site do Dashboard (www.sistema.augenengenharia.com);
+2. Escolher o poço a ser analisado em “Selecione um poço”;
+3. Clicar em “Acessar Histórico” para ter acesso a dados detalhados do poço;
+4. Clicar em “Ir ao modelo detalhado” para ter acesso aos gráficos do poço;
+5. Observar os gráficos de Cloro Livre e de Fluoreto para identificar possíveis irregularidades e travamentos;
+6. Se houver travamentos, registrar, juntamente com o horário de travamento. Caso não houver, apenas assinalar que não houve travamentos;
+7. Informar ao responsável os resultados das análises junto com possíveis formas de resolver irregularidade encontradas;
+8. Analisar se a produção, presente em “Desempenho Geral” está Ok;
+9. Registrar os valores de Cloro Livre e Fluoreto demonstrados em “Dados Gerais” do poço;
+10. Registrar a dosagem e o modo de operação da bomba de Hipoclorito de Sódio e de Ácido Fluossilícico presentes também em “Dados Gerais”;
+11. Verificar se a dosagem de Hipoclorito de Sódio e de Ácido Fluossilícico estão corretas. Para isso, seguir os passos de 7 a 9, explicados abaixo;
+12. Registrar a macro vazão do poço;
+13. Com os dados de macro vazão e o Set Point de Cloro Livre do poço, utilizar a Equação 1 para calcular a dosagem teórica da bomba dosadora de Hipoclorito de Sódio;
+
+
+
+	Equação (1)
+	
+
+14. Com os dados de macro vazão e o Set Point de Fluoreto do poço, utilizar a Equação 2 para calcular a dosagem teórica da bomba dosadora de Ácido Fluossilícico;
+
+
+
+	Equação (2)
+	
+
+15. Registrar os parâmetros (Cloro Livre, Flúor, pH, Cor e Turbidez) que estão alarmados de vermelho, baseados nos valores de alarmes demonstrado na Tabela 1. 
+Tabela 1. Alarmes sugeridos para acompanhar o comportamento das variáveis de processo dos Poços 4.0 via Dashboard
+Flúor
+	Cloro Livre
+	pH
+	Cor
+	Turbidez
+	LL
+	0,55
+	LL
+	0,4
+	LL
+	6,0
+	H
+	13
+	H
+	0,8
+	L
+	0,60
+	L
+	0,6
+	L
+	6,2
+	HH
+	15
+	HH
+	1,0
+	H
+	0,85
+	H
+	2,5
+	H
+	7,8
+	
+
+	
+
+	
+
+	
+
+	HH
+	0,90
+	HH
+	2,8
+	HH
+	8,0
+	
+
+	
+
+	
+
+	
+
+	
+
+Se o valor registrado for menor ou igual ao valor especificado na tabela como “LL”, o alarme vermelho será demonstrado. Se o valor registrado for maior ou igual ao valor especificado na tabela como “HH”, o alarme vermelho também será demonstrado;
+________________
+
+
+Indicadores de Desempenho Operacional dos Poços
+1. Indicador de Precisão
+Avaliará a porcentagem de análises de todos os parâmetros realizadas pelo Poço que atingiram o valor do Set Point estabelecido em relação ao total de análises feitas, com uma margem de erro de ± 0,1.
+
+
+
+2. Indicador de Legislação
+Será avaliada a porcentagem de análises que ficaram dentro do limite estabelecido pela legislação para todos os parâmetros em comparação ao número total de análises realizadas, sem margem de erro.
+
+
+
+
+
+3. Indicador de Travamentos
+Avaliará o número de travamentos registrados pelo Poço em um período de 30 dias. 
+
+
+
+
+
+4. Indicador de Perda de Comunicação
+Será avaliada a quantidade vezes, em um período de 30 dias, que foram registradas perdas de comunicação do Poço.
+
+
+
+
+
+5. Indicadores de Alarmes
+Avaliará a quantidade de vezes, por dia, por semana e por mês, que foram registrados alarmes no Poço. 
+
+
+
+
+
+
+
+
+
+
+
+6. Indicadores de Manutenção
+Informará a quantidade de vezes, por semana e por mês, que foi necessário a ida do técnico ao poço para a realização de manutenções. 
+
+
+
+
+
+
+
+
+7. Indicador de Consumo de Produto
+Medirá a quantidade, em litros, consumida dos produtos Hipoclorito de Sódio e Ácido Fluossilícico, por mês. 
+
+
+
+
+
+
+
+
+
+8. Indicador de Vazão de Produto
+Indicará, em porcentagem, se a vazão do produto dosado, foi menor ou maior do que a vazão teórica calculada.
+
+
+
+
+
+Se o valor do indicador for maior que 1, significa que está sendo dosado mais do que a dosagem teórica. Se o valor do indicador for menor que 1, significa que está sendo dosado menos do que a dosagem teórica.
